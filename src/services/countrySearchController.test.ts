@@ -72,8 +72,7 @@ describe('countrySearchController', () => {
       json: async () => [{ ...baseCountry, name: 'Singapore' }],
     } as Response);
 
-    await Promise.resolve();
-    await Promise.resolve();
+    await vi.advanceTimersByTimeAsync(0);
 
     expect(fetchMock).toHaveBeenCalledTimes(2);
     expect(states.at(-1)).toEqual({
@@ -136,7 +135,7 @@ describe('countrySearchController', () => {
       message: 'Network error. Please check your connection and try again.',
     });
     controller.retry();
-    await Promise.resolve();
+    await vi.advanceTimersByTimeAsync(0);
     await Promise.resolve();
 
     expect(fetchMock).toHaveBeenCalledTimes(2);
