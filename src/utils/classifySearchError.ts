@@ -1,4 +1,4 @@
-import { HttpError } from '../api/HttpError';
+import { HttpError } from '../api/HttpError.js';
 
 export type SearchErrorClassification = { type: 'aborted' } | { type: 'error'; message: string };
 export function classifySearchError(error: unknown): SearchErrorClassification {

@@ -1,6 +1,6 @@
-import { HttpError } from './HttpError';
-import { mapCountryResponse } from '../utils/mapCountryResponse';
-import { type Country, type RawCountry } from '../types/country';
+import { HttpError } from './HttpError.js';
+import { mapCountryResponse } from '../utils/mapCountryResponse.js';
+import { type Country, type RawCountry } from '../types/country.js';
 
 const BASE_URL = 'https://countries.dev/name';
 const REQUEST_TIMEOUT_MS = 8000;
